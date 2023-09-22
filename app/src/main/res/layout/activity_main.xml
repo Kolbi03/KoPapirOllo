@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/relativeLayout">
+
+
+
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:id="@+id/sajatImageview"
+        android:src="@drawable/paper"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sajatImageview"
+        android:text="A te Választásod"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:id="@+id/sajatTextview"
+        />
+
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_below="@id/sajatTextview"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="150sp"
+        android:id="@+id/enemyImageview"
+        android:src="@drawable/paper"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enemyTextview"
+        android:layout_below="@+id/enemyImageview"
+        android:textSize="40sp"
+        android:text="Az ellenfél választása"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/eredmenyLinearlayout"
+        android:layout_below="@id/enemyTextview"
+        android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enemyTextview"
+        android:textSize="25sp"
+        android:text="Eredmény: Ember: " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enemyTextview"
+            android:textSize="25sp"
+            android:text="0"
+            android:id="@+id/sajatPont"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enemyTextview"
+            android:textSize="25sp"
+            android:text=" Ellenfél: " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enemyTextview"
+            android:textSize="25sp"
+            android:text="0"
+            android:id="@+id/enemyPont"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/eredmenyLinearlayout"
+        android:layout_marginTop="25sp"
+        android:minHeight="50sp">
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonKo"
+            android:text="Kő"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonPapir"
+            android:text="Papír"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonOllo"
+            android:text="Olló"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
